@@ -1,4 +1,4 @@
-import { auth, naiveui, tailwindcss, s3, fcm } from "./config";
+import { naiveui, tailwindcss } from "./config";
 
 export default defineNuxtConfig({
   ssr: true,
@@ -14,20 +14,10 @@ export default defineNuxtConfig({
 
   css: ["~/assets/styles/main.css"],
 
-  modules: [
-    "@bg-dev/nuxt-auth",
-    "@bg-dev/nuxt-naiveui",
-    "@nuxtjs/tailwindcss",
-    "@bg-dev/nuxt-s3",
-    "nuxt-security",
-    "@bg-dev/nuxt-fcm",
-  ],
+  modules: ["@bg-dev/nuxt-naiveui", "@nuxtjs/tailwindcss", "nuxt-security"],
 
-  auth,
   naiveui,
   tailwindcss,
-  s3,
-  fcm,
 
   security: {
     corsHandler: {
@@ -44,23 +34,8 @@ export default defineNuxtConfig({
           "https://*.googleusercontent.com",
           "https://ui-avatars.com",
           "https://www.googletagmanager.com",
-          process.env.S3_PUBLIC_BUCKET_URL || "",
         ],
       },
-    },
-  },
-
-  routeRules: {
-    "api/s3/object/create": {
-      security: {
-        xssValidator: false,
-      },
-    },
-  },
-
-  vite: {
-    optimizeDeps: {
-      exclude: ["firebase/analytics"],
     },
   },
 
