@@ -13,6 +13,7 @@
     "release": "changelogen --release && git push --follow-tags"
   },
   "devDependencies": {
+    "@bg-dev/nuxt-directus": "2.2.0-beta",
     "@bg-dev/nuxt-naiveui": "^1.2.3",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "changelogen": "^0.5.4",

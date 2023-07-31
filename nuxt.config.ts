@@ -1,4 +1,4 @@
-import { naiveui, tailwindcss } from "./config";
+import { naiveui, tailwindcss, directus } from "./config";
 
 export default defineNuxtConfig({
   ssr: true,
@@ -14,14 +14,20 @@ export default defineNuxtConfig({
 
   css: ["~/assets/styles/main.css"],
 
-  modules: ["@bg-dev/nuxt-naiveui", "@nuxtjs/tailwindcss", "nuxt-security"],
+  modules: [
+    "@bg-dev/nuxt-naiveui",
+    "@bg-dev/nuxt-directus",
+    "@nuxtjs/tailwindcss",
+    "nuxt-security",
+  ],
 
   naiveui,
   tailwindcss,
+  directus,
 
   security: {
     corsHandler: {
-      origin: process.env.AUTH_BASE_URL,
+      origin: process.env.DIRECTUS_REST_NUXT_BASE_URL,
       methods: "*",
     },
     headers: {
