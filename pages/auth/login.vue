@@ -42,7 +42,7 @@ definePageMeta({
 })
 
 const { formRef, rules, pending, apiErrors, onSubmit } = useNaiveForm()
-const { login, loginWithProvider } = useAuth()
+const { login, loginWithProvider } = useDirectusAuth()
 
 const model = ref({
     email: "",
@@ -90,15 +90,12 @@ rules.value = {
 }
 
 async function handleSubmit() {
-    const { error } = await login({
-        email: model.value.email,
-        password: model.value.password
-    });
+    return login(model.value.email, model.value.password);
 
-    if (error.value) {
-        apiErrors.value.wrongCredentials = error.value.data?.message === "wrong-credentials"
-        apiErrors.value.accountNotVerified = error.value.data?.message === "account-not-verified"
-        apiErrors.value.accountSuspended = error.value.data?.message === "account-suspended"
-    }
+    // if (error.value) {
+    //     apiErrors.value.wrongCredentials = error.value.data?.message === "wrong-credentials"
+    //     apiErrors.value.accountNotVerified = error.value.data?.message === "account-not-verified"
+    //     apiErrors.value.accountSuspended = error.value.data?.message === "account-suspended"
+    // }
 }
 </script>

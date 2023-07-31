@@ -44,7 +44,6 @@ definePageMeta({
 })
 
 const { formRef, pending, rules, onSubmit, apiErrors } = useNaiveForm()
-const { register, requestEmailVerify } = useAuth()
 const success = ref(false)
 
 apiErrors.value = {
@@ -112,20 +111,19 @@ rules.value = {
 };
 
 async function handleSubmit() {
-    const { error } = await register({
+    await useDirectusRest(createUser({
         email: model.value.email,
         password: model.value.password,
-        name: model.value.firstName + " " + model.value.lastName
-    })
+        first_name: model.value.firstName,
+        last_name: model.value.lastName
+    }))
 
-    if (error.value) {
-        apiErrors.value.emailAlreadyExists = error.value.data?.message.includes("email-used-with") || false
-    }
+    // if (error.value) {
+    //     apiErrors.value.emailAlreadyExists = error.value.data?.message.includes("email-used-with") || false
+    // }
 
-    else {
-        await requestEmailVerify(model.value.email)
-
-        success.value = true
-    }
+    // else {
+    //     success.value = true
+    // }
 }
 </script>

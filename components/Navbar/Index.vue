@@ -1,15 +1,15 @@
 <template>
-    <naive-navbar v-if="user" :routes="routes" drawer-closable>
+    <naive-navbar :routes="routes" drawer-closable>
         <template #start>
             <NuxtLink to="/" class="flex items-center gap-3">
-                <NaiveIcon name="logos:nuxt-icon" :size="25"></NaiveIcon>
-                <n-text strong>Nuxt starter</n-text>
+                <NaiveIcon name="simple-icons:directus" :size="25" icon-color="#6644fe"></NaiveIcon>
+                <n-text strong>Directus starter</n-text>
             </NuxtLink>
         </template>
 
         <template #end v-if="!isMobileOrTablet">
             <n-dropdown trigger="click" :options="dropdownOptions" :style="{ padding: '8px' }" @select="handleSelect">
-                <S3Image :src="user.picture" class="w-8 h-8 object-contain rounded-full ring-2 cursor-pointer" />
+                <AccountAvatar class="cursor-pointer h-8 w-8"></AccountAvatar>
             </n-dropdown>
         </template>
 
@@ -30,10 +30,8 @@ import { NaiveIcon, AccountInfo } from "#components"
 import { NavbarRoute } from "@bg-dev/nuxt-naiveui"
 import type { DropdownOption } from "naive-ui"
 
-const { useUser } = useAuthSession()
-const { logout } = useAuth()
+const { logout } = useDirectusAuth()
 const { isMobileOrTablet } = useNaiveDevice()
-const user = useUser()
 
 const routes = ref<NavbarRoute[]>([])
 
@@ -45,51 +43,27 @@ if (isMobileOrTablet) {
     })
 }
 
-const dropdownOptions = ref<DropdownOption[]>([])
-
-watch(user, (newUser, oldUser) => {
-    if (!newUser || newUser.role === oldUser?.role) {
-        return
+const dropdownOptions = ref<DropdownOption[]>([
+    {
+        key: 'header',
+        type: 'render',
+        render: () => h(AccountInfo)
+    },
+    {
+        key: 'divider',
+        type: 'divider',
+    },
+    {
+        label: 'Account',
+        key: 'account',
+        icon: () => h(NaiveIcon, { name: 'ph:user' }),
+    },
+    {
+        label: 'Logout',
+        key: 'logout',
+        icon: () => h(NaiveIcon, { name: 'ph:sign-out' }),
     }
-
-    dropdownOptions.value = [
-        {
-            key: 'header',
-            type: 'render',
-            render: () => h(AccountInfo)
-        },
-        {
-            key: 'divider',
-            type: 'divider',
-        },
-        {
-            label: 'Account',
-            key: 'account',
-            icon: () => h(NaiveIcon, { name: 'ph:user' }),
-        },
-        {
-            label: 'Logout',
-            key: 'logout',
-            icon: () => h(NaiveIcon, { name: 'ph:sign-out' }),
-        }
-    ]
-
-    if (newUser.role === "admin") {
-        dropdownOptions.value.splice(3, 0, {
-            label: 'Management',
-            key: 'management',
-            icon: () => h(NaiveIcon, { name: 'ph:users' }),
-        })
-
-        if (isMobileOrTablet) {
-            routes.value.push({
-                label: "Management",
-                path: "/management",
-                icon: 'ph:users'
-            })
-        }
-    }
-}, { immediate: true })
+])
 
 
 async function handleSelect(key: string) {
@@ -98,8 +72,6 @@ async function handleSelect(key: string) {
     }
     else if (key === 'account') {
         return navigateTo('/account')
-    } else if (key === 'management') {
-        return navigateTo('/management')
     }
 }
 </script>

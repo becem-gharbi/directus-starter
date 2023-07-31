@@ -8,10 +8,10 @@ export const directus: Partial<ModuleOptions> = {
   },
 
   graphql: {
-    enabled: true,
-    httpEndpoint:
-      process.env.DIRECTUS_GRAPHQL_HTTP_ENDPOINT ||
-      "http://127.0.0.1:8055/graphql",
+    enabled: false,
+    // httpEndpoint:
+    //   process.env.DIRECTUS_GRAPHQL_HTTP_ENDPOINT ||
+    //   "http://127.0.0.1:8055/graphql",
   },
 
   auth: {

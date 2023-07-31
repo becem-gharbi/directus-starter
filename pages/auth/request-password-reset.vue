@@ -36,7 +36,7 @@ definePageMeta({
 })
 
 const { formRef, rules, pending, onSubmit } = useNaiveForm()
-const { requestPasswordReset } = useAuth()
+const { requestPasswordReset } = useDirectusAuth()
 
 const success = ref(false)
 
@@ -60,14 +60,14 @@ rules.value = {
 }
 
 async function handleSubmit() {
-    const { error } = await requestPasswordReset(model.value.email)
+    return await requestPasswordReset(model.value.email)
 
-    if (error.value) {
-        console.warn(error.value.data?.message)
-    }
+    // if (error.value) {
+    //     console.warn(error.value.data?.message)
+    // }
 
-    else {
-        success.value = true
-    }
+    // else {
+    //     success.value = true
+    // }
 }
 </script>

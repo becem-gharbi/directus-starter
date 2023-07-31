@@ -5,7 +5,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "Nuxt starter",
+      title: "Directus starter",
       htmlAttrs: {
         lang: "en",
       },
@@ -48,7 +48,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       bugsnag: {
-        enabled: !process.dev,
+        enabled: false,
         apiKey: process.env.BUGSNAG_API_KEY,
       },
     },

@@ -4,21 +4,16 @@
             <AccountProfile />
         </n-card>
 
-        <n-card v-if="user?.provider === 'default'" title="Password" segmented size="small">
+        <!-- <n-card v-if="user?.provider === 'default'" title="Password" segmented size="small">
             <AccountPassword />
-        </n-card>
+        </n-card> -->
 
         <n-card title="Preferences" segmented size="small">
             <AccountPreferences />
-        </n-card>
-
-        <n-card title="Sessions" segmented size="small">
-            <AccountSessions />
         </n-card>
     </div>
 </template>
 
 <script setup>
-const { useUser } = useAuthSession()
-const user = useUser()
+// const { user } = useDirectusAuth()
 </script>

@@ -2,7 +2,7 @@
     <div>
         <n-upload class="overflow-hidden w-min mx-auto my-4" list-type="image-card" :max="1" accept="image/*"
             :custom-request="(e) => file = e.file.file">
-            <S3Image v-if="formModel.picture" :src="formModel.picture" class="object-contain" />
+            <img v-if="formModel.picture" :src="formModel.picture" class="object-contain">
         </n-upload>
 
         <n-form @submit.prevent="updateAccount" class="flex-1">
@@ -23,11 +23,7 @@
 </template>
 
 <script setup lang="ts">
-const { useUser, getAccessToken } = useAuthSession()
-const { upload } = useS3Object()
-const { fetchUser } = useAuth()
-
-const user = useUser()
+const { fetchUser, user } = useDirectusAuth()
 
 const formModel = ref({
     name: user.value?.name,
@@ -40,34 +36,34 @@ const file = ref<File | null>()
 const loading = ref(false)
 
 async function updateAccount() {
-    try {
-        loading.value = true
+    // try {
+    //     loading.value = true
 
-        if (file.value) {
-            const accessToken = await getAccessToken()
+    //     if (file.value) {
+    //         const accessToken = await getAccessToken()
 
-            const { data } = await upload({
-                files: [file.value],
-                url: formModel.value.picture,
-                authorization: `Bearer ${accessToken}`
-            })
+    //         const { data } = await upload({
+    //             files: [file.value],
+    //             url: formModel.value.picture,
+    //             authorization: `Bearer ${accessToken}`
+    //         })
 
-            if (data.value) {
-                formModel.value.picture = data.value[0].url
-            }
-        }
+    //         if (data.value) {
+    //             formModel.value.picture = data.value[0].url
+    //         }
+    //     }
 
-        await useAuthFetch("/api/user", {
-            method: "post",
-            body: formModel.value,
-        })
+    //     await useAuthFetch("/api/user", {
+    //         method: "post",
+    //         body: formModel.value,
+    //     })
 
-        file.value = null
+    //     file.value = null
 
-        await fetchUser()
-    }
-    finally {
-        loading.value = false
-    }
+    //     await fetchUser()
+    // }
+    // finally {
+    //     loading.value = false
+    // }
 }
 </script>
