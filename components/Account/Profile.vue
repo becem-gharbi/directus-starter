@@ -56,6 +56,11 @@ async function handleSubmit() {
             formData.append("file", file.value);
 
             const { id } = await useDirectusRest(uploadFiles(formData)) as { id: string }
+
+            if (model.value.avatar) {
+                await useDirectusRest(deleteFile(model.value.avatar as string))
+            }
+
             model.value.avatar = id
         }
 

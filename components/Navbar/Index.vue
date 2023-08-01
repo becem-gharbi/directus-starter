@@ -8,7 +8,7 @@
         </template>
 
         <template #end v-if="!isMobileOrTablet">
-            <n-dropdown trigger="click" :options="dropdownOptions" :style="{ padding: '8px', minWidth: '220px' }"
+            <n-dropdown trigger="click" :options="dropdownOptions" :style="{ padding: '8px', minWidth: '200px' }"
                 @select="handleSelect">
                 <AccountAvatar class="cursor-pointer h-8 w-8"></AccountAvatar>
             </n-dropdown>
