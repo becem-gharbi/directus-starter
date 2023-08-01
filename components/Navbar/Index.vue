@@ -3,7 +3,7 @@
         <template #start>
             <NuxtLink to="/" class="flex items-center gap-3">
                 <NaiveIcon name="simple-icons:directus" :size="25" icon-color="#6644fe"></NaiveIcon>
-                <n-text strong>Directus starter</n-text>
+                <n-text strong>Directus</n-text>
             </NuxtLink>
         </template>
 
