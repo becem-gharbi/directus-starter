@@ -1,4 +1,4 @@
-# Directus starter
+# Nuxt Directus starter
 
 A template to quickly get started on your Nuxt 3 project with Directus ✨
 

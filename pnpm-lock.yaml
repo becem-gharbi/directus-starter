@@ -37,6 +37,9 @@ devDependencies:
   nuxt:
     specifier: ^3.6.5
     version: 3.6.5(@parcel/watcher@2.2.0)(@types/node@20.4.5)(typescript@5.1.6)
+  nuxt-gtag:
+    specifier: ^0.5.7
+    version: 0.5.7
   nuxt-security:
     specifier: ^0.14.4
     version: 0.14.4
@@ -6238,6 +6241,17 @@ packages:
     dependencies:
       '@nuxt/kit': 3.6.5
       defu: 6.1.2
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
+  /nuxt-gtag@0.5.7:
+    resolution: {integrity: sha512-Q6NRndEJ0phEfKdS4uLy3hpVBkgWGnG5KJ2dhVyCmbLXcfakkmf19f2WJ5uM2yUOg8rAkYgDjRb9XyAfE+okuA==}
+    dependencies:
+      '@nuxt/kit': 3.6.5
+      defu: 6.1.2
+      pathe: 1.1.1
     transitivePeerDependencies:
       - rollup
       - supports-color

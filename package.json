@@ -21,6 +21,7 @@
     "@parcel/watcher": "^2.2.0",
     "changelogen": "^0.5.4",
     "nuxt": "^3.6.5",
+    "nuxt-gtag": "^0.5.7",
     "nuxt-security": "^0.14.4"
   },
   "dependencies": {

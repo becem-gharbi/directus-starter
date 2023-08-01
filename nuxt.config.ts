@@ -24,6 +24,10 @@ export default defineNuxtConfig({
     },
   },
 
+  gtag: {
+    id: process.env.GTAG_MEASUREMENT_ID,
+  },
+
   css: ["~/assets/styles/main.css"],
 
   modules: [
@@ -31,6 +35,7 @@ export default defineNuxtConfig({
     "@bg-dev/nuxt-directus",
     "@nuxtjs/tailwindcss",
     "nuxt-security",
+    "nuxt-gtag",
   ],
 
   naiveui,
