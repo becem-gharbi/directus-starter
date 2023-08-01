@@ -29,6 +29,9 @@ const themeConfig = ref<ThemeConfig>({
       lineHeight: theme.lineHeight.normal,
       borderRadius: "6px"
     },
+    Form: {
+      feedbackPadding: theme.padding[2],
+    },
   },
 
   light: {

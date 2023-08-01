@@ -1,8 +1,8 @@
 <template>
     <div class="md:w-1/2 md:mx-auto flex flex-col gap-4">
-        <!-- <n-card title="Profile" segmented size="small">
+        <n-card title="Profile" segmented size="small">
             <AccountProfile />
-        </n-card> -->
+        </n-card>
 
         <!-- <n-card v-if="user?.provider === 'default'" title="Password" segmented size="small">
             <AccountPassword />

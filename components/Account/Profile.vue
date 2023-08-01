@@ -2,68 +2,74 @@
     <div>
         <n-upload class="overflow-hidden w-min mx-auto my-4" list-type="image-card" :max="1" accept="image/*"
             :custom-request="(e) => file = e.file.file">
-            <img v-if="formModel.picture" :src="formModel.picture" class="object-contain">
+            <AccountAvatar></AccountAvatar>
         </n-upload>
 
-        <n-form @submit.prevent="updateAccount" class="flex-1">
-            <n-form-item label="Name">
-                <n-input v-model:value="formModel.name"></n-input>
+        <n-form ref="formRef" :model="model" :rules="rules" @submit.prevent="() => onSubmit(handleSubmit)" class="flex-1">
+            <n-form-item label="First name" path="firstName">
+                <n-input v-model:value="model.firstName"></n-input>
             </n-form-item>
 
-            <n-form-item label="Birthday">
-                <n-date-picker format="dd-MM-yyyy" type="date" v-model:value="formModel.birthday"
-                    class="w-full"></n-date-picker>
+            <n-form-item label="Last name" path="lastName">
+                <n-input v-model:value="model.lastName"></n-input>
             </n-form-item>
 
-            <n-button attr-type="submit" :loading="loading" :disabled="loading" type="primary" class="float-right">Update
+            <n-button attr-type="submit" :loading="pending" :disabled="pending" type="primary">Update
                 profile</n-button>
         </n-form>
-
     </div>
 </template>
 
 <script setup lang="ts">
 const { fetchUser, user } = useDirectusAuth()
 
-const formModel = ref({
-    name: user.value?.name,
-    picture: user.value?.picture,
-    birthday: new Date(user.value?.birthday || 1181167200000).getTime()
+const model = ref({
+    firstName: user.value?.first_name,
+    lastName: user.value?.last_name,
+    avatar: user.value?.avatar
 })
 
+const { formRef, onSubmit, pending, rules } = useNaiveForm()
+
+rules.value = {
+    firstName: [
+        {
+            required: true,
+            message: "Please input your first name",
+            trigger: "blur",
+        },
+    ],
+    lastName: [
+        {
+            required: true,
+            message: "Please input your last name",
+            trigger: "blur",
+        },
+    ],
+}
 const file = ref<File | null>()
 
-const loading = ref(false)
+async function handleSubmit() {
+    try {
+        if (file.value) {
+            const formData = new FormData();
+            formData.append("file", file.value);
 
-async function updateAccount() {
-    // try {
-    //     loading.value = true
+            const { id } = await useDirectusRest(uploadFiles(formData)) as { id: string }
+            model.value.avatar = id
+        }
 
-    //     if (file.value) {
-    //         const accessToken = await getAccessToken()
+        await useDirectusRest(updateMe({
+            first_name: model.value.firstName,
+            last_name: model.value.lastName,
+            avatar: model.value.avatar
+        }))
 
-    //         const { data } = await upload({
-    //             files: [file.value],
-    //             url: formModel.value.picture,
-    //             authorization: `Bearer ${accessToken}`
-    //         })
+        file.value = null
 
-    //         if (data.value) {
-    //             formModel.value.picture = data.value[0].url
-    //         }
-    //     }
-
-    //     await useAuthFetch("/api/user", {
-    //         method: "post",
-    //         body: formModel.value,
-    //     })
-
-    //     file.value = null
-
-    //     await fetchUser()
-    // }
-    // finally {
-    //     loading.value = false
-    // }
+        await fetchUser()
+    }
+    catch (e) {
+    }
 }
 </script>
