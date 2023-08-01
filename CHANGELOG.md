@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.1.2
+
+[compare changes](https://github.com/becem-gharbi/directus-starter/compare/v0.1.1...v0.1.2)
+
+### 🚀 Enhancements
+
+- Add graphql example ([95b3d94](https://github.com/becem-gharbi/directus-starter/commit/95b3d94))
+
+### 📖 Documentation
+
+- Update README ([7273ab3](https://github.com/becem-gharbi/directus-starter/commit/7273ab3))
+
+### 🏡 Chore
+
+- Add GTAG ([34b6741](https://github.com/becem-gharbi/directus-starter/commit/34b6741))
+
+### ❤️  Contributors
+
+- Becem Gharbi <becem.gharbi@live.com>
+
 ## v0.1.1
 
 
