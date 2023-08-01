@@ -122,12 +122,15 @@ rules.value = {
 };
 
 async function handleSubmit() {
+    const { defaultRoleId } = useRuntimeConfig().public
+
     try {
         await useDirectusRest(createUser({
             email: model.value.email,
             password: model.value.password,
             first_name: model.value.firstName,
-            last_name: model.value.lastName
+            last_name: model.value.lastName,
+            role: defaultRoleId
         }))
 
         success.value = true

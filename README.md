@@ -11,7 +11,7 @@ A template to quickly get started on your Nuxt 3 project with Directus ✨
 - ✔️ Error monitoring via [bugsnag-js](https://github.com/bugsnag/bugsnag-js) module
 
 ## Setup
-1. First make sure to learn about [nuxt-directus](https://github.com/becem-gharbi/nuxt-directus) and [nuxt-apollo](https://github.com/becem-gharbi/nuxt-apollo) modules
+1. First please make sure to learn about [nuxt-directus](https://github.com/becem-gharbi/nuxt-directus) module
 1. Rename `.example.env` to `.env` and set the environment variables
 2. Make sure to install the dependencies
 
