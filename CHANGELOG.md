@@ -1,5 +1,26 @@
 # Changelog
 
+## v0.1.1
+
+
+### 🚀 Enhancements
+
+- Add profile update form ([6363375](https://github.com/becem-gharbi/directus-starter/commit/6363375))
+
+### 💅 Refactors
+
+- Minor UI refactoring ([e154ca3](https://github.com/becem-gharbi/directus-starter/commit/e154ca3))
+
+### 🏡 Chore
+
+- Remove unused dependencies ([9e7b136](https://github.com/becem-gharbi/directus-starter/commit/9e7b136))
+- Add @bg-dev/nuxt-directus ([823a980](https://github.com/becem-gharbi/directus-starter/commit/823a980))
+- Migrate to nuxt-directus APIs ([0f3efd6](https://github.com/becem-gharbi/directus-starter/commit/0f3efd6))
+
+### ❤️  Contributors
+
+- Becem Gharbi <becem.gharbi@live.com>
+
 ## v0.5.5
 
 [compare changes](https://github.com/becem-gharbi/nuxt-starter/compare/v0.5.4...v0.5.5)
