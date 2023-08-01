@@ -18,7 +18,7 @@
 
             </div>
 
-            <div class="w-2/3 hidden md:block bg-gradient-to-r from-cyan-500 to-blue-500"></div>
+            <div class="w-2/3 hidden md:block bg-gradient-to-r from-violet-500 to-violet-600"></div>
         </div>
     </div>
 </template>

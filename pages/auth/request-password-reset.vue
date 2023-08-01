@@ -4,7 +4,7 @@
             description="We've sent you a secure link to reset your password">
             <template #footer>
                 <nuxt-link to="/auth/login" class="no-underline">
-                    <n-button type="primary">Go back to login</n-button>
+                    <n-button type="primary">Login to my account</n-button>
                 </nuxt-link>
             </template>
         </n-result>
@@ -60,14 +60,7 @@ rules.value = {
 }
 
 async function handleSubmit() {
-    return await requestPasswordReset(model.value.email)
-
-    // if (error.value) {
-    //     console.warn(error.value.data?.message)
-    // }
-
-    // else {
-    //     success.value = true
-    // }
+    await requestPasswordReset(model.value.email)
+    success.value = true
 }
 </script>

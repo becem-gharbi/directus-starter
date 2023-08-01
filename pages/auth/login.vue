@@ -52,8 +52,6 @@ const model = ref({
 apiErrors.value = {
     wrongCredentials: false,
     invalidProvider: false,
-    accountNotVerified: false,
-    accountSuspended: false
 }
 
 rules.value = {
@@ -72,13 +70,9 @@ rules.value = {
             validator: () => !apiErrors.value.wrongCredentials
         },
         {
-            message: "Your account is not verified",
-            validator: () => !apiErrors.value.accountNotVerified
+            message: "Invalid provider",
+            validator: () => !apiErrors.value.invalidProvider
         },
-        {
-            message: "Your account is suspended",
-            validator: () => !apiErrors.value.accountSuspended
-        }
     ],
     password: [
         {
@@ -90,12 +84,14 @@ rules.value = {
 }
 
 async function handleSubmit() {
-    return login(model.value.email, model.value.password);
-
-    // if (error.value) {
-    //     apiErrors.value.wrongCredentials = error.value.data?.message === "wrong-credentials"
-    //     apiErrors.value.accountNotVerified = error.value.data?.message === "account-not-verified"
-    //     apiErrors.value.accountSuspended = error.value.data?.message === "account-suspended"
-    // }
+    try {
+        await login(model.value.email, model.value.password)
+    }
+    catch (e) {
+        //@ts-ignore
+        const code = e["data"]["errors"][0]["extensions"]["code"]
+        apiErrors.value.wrongCredentials = code === "INVALID_CREDENTIALS"
+        apiErrors.value.invalidProvider = code === "INVALID_PROVIDER"
+    }
 }
 </script>

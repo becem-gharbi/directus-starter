@@ -25,7 +25,7 @@ import { theme } from "#tailwind-config";
 const themeConfig = ref<ThemeConfig>({
   shared: {
     common: {
-      fontFamily: theme.fontFamily.sans[0],
+      fontFamily: theme.fontFamily.sans.join(","),
       lineHeight: theme.lineHeight.normal,
       borderRadius: "6px"
     },
@@ -33,9 +33,9 @@ const themeConfig = ref<ThemeConfig>({
 
   light: {
     common: {
-      primaryColor: theme.colors.blue[600],
-      primaryColorHover: theme.colors.blue[500],
-      primaryColorPressed: theme.colors.blue[700],
+      primaryColor: theme.colors.violet[600],
+      primaryColorHover: theme.colors.violet[500],
+      primaryColorPressed: theme.colors.violet[700],
       borderColor: theme.colors.gray[300],
     },
     Card: {
@@ -45,9 +45,9 @@ const themeConfig = ref<ThemeConfig>({
 
   dark: {
     common: {
-      primaryColor: theme.colors.blue[500],
-      primaryColorHover: theme.colors.blue[400],
-      primaryColorPressed: theme.colors.blue[600],
+      primaryColor: theme.colors.violet[500],
+      primaryColorHover: theme.colors.violet[400],
+      primaryColorPressed: theme.colors.violet[600],
       borderColor: theme.colors.gray[800],
     },
     Card: {

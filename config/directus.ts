@@ -4,7 +4,7 @@ export const directus: Partial<ModuleOptions> = {
   rest: {
     baseUrl: process.env.DIRECTUS_REST_BASE_URL || "http://127.0.0.1:8055",
     nuxtBaseUrl:
-      process.env.DIRECTUS_REST_NUXT_BASE_URL || "http:127.0.0.1:3000",
+      process.env.DIRECTUS_REST_NUXT_BASE_URL || "http://127.0.0.1:3000",
   },
 
   graphql: {
@@ -16,8 +16,8 @@ export const directus: Partial<ModuleOptions> = {
 
   auth: {
     enabled: true,
-    accessTokenCookieName: "access_token",
-    refreshTokenCookieName: "refresh_token",
+    accessTokenCookieName: "directus_access_token",
+    refreshTokenCookieName: "directus_refresh_token",
     enableGlobalAuthMiddleware: true,
     msRefreshBeforeExpires: 3000,
     redirect: {

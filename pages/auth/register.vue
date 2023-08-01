@@ -1,6 +1,11 @@
 <template>
     <div>
-        <n-result v-if="success" status="success" title="Email verification is sent" description="Please check your inbox">
+        <n-result v-if="success" status="success" title="Registration completed" description="Welcome on board">
+            <template #footer>
+                <nuxt-link to="/auth/login" class="no-underline">
+                    <n-button type="primary">Login to my account</n-button>
+                </nuxt-link>
+            </template>
         </n-result>
 
         <div v-else>
@@ -47,7 +52,8 @@ const { formRef, pending, rules, onSubmit, apiErrors } = useNaiveForm()
 const success = ref(false)
 
 apiErrors.value = {
-    emailAlreadyExists: false
+    emailAlreadyExists: false,
+    forbidden: false
 }
 
 const model = ref({
@@ -85,6 +91,11 @@ rules.value = {
             trigger: "input"
         },
         {
+            validator: () => !apiErrors.value.forbidden,
+            message: "Permission not granted",
+            trigger: "input"
+        },
+        {
             type: "email",
             message: "Should be a valid email address"
         },
@@ -111,19 +122,21 @@ rules.value = {
 };
 
 async function handleSubmit() {
-    await useDirectusRest(createUser({
-        email: model.value.email,
-        password: model.value.password,
-        first_name: model.value.firstName,
-        last_name: model.value.lastName
-    }))
+    try {
+        await useDirectusRest(createUser({
+            email: model.value.email,
+            password: model.value.password,
+            first_name: model.value.firstName,
+            last_name: model.value.lastName
+        }))
 
-    // if (error.value) {
-    //     apiErrors.value.emailAlreadyExists = error.value.data?.message.includes("email-used-with") || false
-    // }
-
-    // else {
-    //     success.value = true
-    // }
+        success.value = true
+    }
+    catch (e) {
+        //@ts-ignore
+        const code = e["errors"][0]["extensions"]["code"]
+        apiErrors.value.forbidden = code === "FORBIDDEN"
+        apiErrors.value.emailAlreadyExists = code === "RECORD_NOT_UNIQUE"
+    }
 }
 </script>

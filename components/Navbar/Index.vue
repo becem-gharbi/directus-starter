@@ -8,7 +8,8 @@
         </template>
 
         <template #end v-if="!isMobileOrTablet">
-            <n-dropdown trigger="click" :options="dropdownOptions" :style="{ padding: '8px' }" @select="handleSelect">
+            <n-dropdown trigger="click" :options="dropdownOptions" :style="{ padding: '8px', minWidth: '220px' }"
+                @select="handleSelect">
                 <AccountAvatar class="cursor-pointer h-8 w-8"></AccountAvatar>
             </n-dropdown>
         </template>
@@ -18,7 +19,7 @@
         </template>
 
         <template #drawer-footer>
-            <n-button secondary block @click="async () => await logout()">
+            <n-button secondary block @click="() => logout()">
                 Logout
             </n-button>
         </template>
@@ -68,7 +69,7 @@ const dropdownOptions = ref<DropdownOption[]>([
 
 async function handleSelect(key: string) {
     if (key === 'logout') {
-        await logout()
+        return logout()
     }
     else if (key === 'account') {
         return navigateTo('/account')

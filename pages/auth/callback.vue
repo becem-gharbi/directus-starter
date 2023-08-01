@@ -1,7 +1,7 @@
 <template>
     <div>
-        <n-result v-if="$route.query.error" status="error" title="Failed to login"
-            :description="$route.query.error.toString()">
+        <n-result v-if="$route.query.reason" status="error" title="Failed to login"
+            :description="$route.query.reason.toString()">
             <template #footer>
                 <nuxt-link to="/auth/login" class="no-underline">
                     <n-button type="primary">Go back to login</n-button>
