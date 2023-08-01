@@ -15,7 +15,10 @@
   "devDependencies": {
     "@bg-dev/nuxt-directus": "2.2.1-beta",
     "@bg-dev/nuxt-naiveui": "^1.2.3",
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/client-preset": "^4.1.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
+    "@parcel/watcher": "^2.2.0",
     "changelogen": "^0.5.4",
     "nuxt": "^3.6.5",
     "nuxt-security": "^0.14.4"
