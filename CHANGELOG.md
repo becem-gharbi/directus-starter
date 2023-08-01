@@ -1,5 +1,26 @@
 # Changelog
 
+## v0.1.3
+
+[compare changes](https://github.com/becem-gharbi/directus-starter/compare/v0.1.2...v0.1.3)
+
+### 🩹 Fixes
+
+- Set role on registration ([4f89c6f](https://github.com/becem-gharbi/directus-starter/commit/4f89c6f))
+- On upload remove old file if exists ([b992359](https://github.com/becem-gharbi/directus-starter/commit/b992359))
+
+### 📖 Documentation
+
+- Update README ([9bcf8ba](https://github.com/becem-gharbi/directus-starter/commit/9bcf8ba))
+
+### 🏡 Chore
+
+- Upgrade dependencies ([36443c2](https://github.com/becem-gharbi/directus-starter/commit/36443c2))
+
+### ❤️  Contributors
+
+- Becem Gharbi <becem.gharbi@live.com>
+
 ## v0.1.2
 
 [compare changes](https://github.com/becem-gharbi/directus-starter/compare/v0.1.1...v0.1.2)
