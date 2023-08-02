@@ -1,0 +1,14 @@
+{
+  "name": "directus",
+  "version": "1.0.0",
+  "description": "Directus Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx directus start"
+  },
+  "author": "Directus",
+  "license": "ISC",
+  "dependencies": {
+    "directus": "^10.5.2"
+  }
+}
