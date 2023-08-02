@@ -29,9 +29,13 @@ pm2 completion install
 ```bash
 git clone https://github.com/becem-gharbi/directus-starter.git
 ```
+- Change directory
+```bash
+cd directus-starter/directus
+```
 - Install dependencies
 ```bash
-cd directus & npm install
+npm install
 ```
 - Rename `example.env` to `.env`
 ```bash
