@@ -25,8 +25,7 @@
     "nuxt-security": "^0.14.4"
   },
   "dependencies": {
-    "@bugsnag/js": "^7.20.2",
-    "highcharts-vue": "^1.4.3"
+    "@bugsnag/js": "^7.20.2"
   },
   "overrides": {
     "vue": "3"
