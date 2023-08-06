@@ -1,5 +1,38 @@
 # Changelog
 
+## v0.1.4
+
+[compare changes](https://github.com/becem-gharbi/directus-starter/compare/v0.1.3...v0.1.4)
+
+### 🚀 Enhancements
+
+- Add useAsyncQuery composable ([33d3706](https://github.com/becem-gharbi/directus-starter/commit/33d3706))
+
+### 🩹 Fixes
+
+- **useAsyncQuery:** Check loading status before resolve ([9c7bfac](https://github.com/becem-gharbi/directus-starter/commit/9c7bfac))
+- **useAsyncQuery:** Add useAsyncData options param ([6c821bf](https://github.com/becem-gharbi/directus-starter/commit/6c821bf))
+
+### 💅 Refactors
+
+- Show NaN on undefined counter ([edde7b3](https://github.com/becem-gharbi/directus-starter/commit/edde7b3))
+
+### 📖 Documentation
+
+- Update README ([e595ddd](https://github.com/becem-gharbi/directus-starter/commit/e595ddd))
+
+### 🏡 Chore
+
+- Add directus installation guide ([a08fa21](https://github.com/becem-gharbi/directus-starter/commit/a08fa21))
+- Update directus example.env ([7c32b64](https://github.com/becem-gharbi/directus-starter/commit/7c32b64))
+- Upgrade dependencies ([b76f79a](https://github.com/becem-gharbi/directus-starter/commit/b76f79a))
+- Specify vue 3 version in package.json ([1988140](https://github.com/becem-gharbi/directus-starter/commit/1988140))
+- Remove highcharts ([ccc7e38](https://github.com/becem-gharbi/directus-starter/commit/ccc7e38))
+
+### ❤️  Contributors
+
+- Becem Gharbi <becem.gharbi@live.com>
+
 ## v0.1.3
 
 [compare changes](https://github.com/becem-gharbi/directus-starter/compare/v0.1.2...v0.1.3)
