@@ -14,8 +14,8 @@ dependencies:
 
 devDependencies:
   '@bg-dev/nuxt-directus':
-    specifier: 2.2.2-beta
-    version: 2.2.2-beta(@vue/apollo-composable@4.0.0-beta.8)
+    specifier: 2.2.3-beta
+    version: 2.2.3-beta(@vue/apollo-composable@4.0.0-beta.8)
   '@bg-dev/nuxt-naiveui':
     specifier: ^1.2.3
     version: 1.2.3(vue@3.3.4)
@@ -712,14 +712,14 @@ packages:
       '@babel/helper-validator-identifier': 7.22.5
       to-fast-properties: 2.0.0
 
-  /@bg-dev/nuxt-directus@2.2.2-beta(@vue/apollo-composable@4.0.0-beta.8):
-    resolution: {integrity: sha512-jGOwAVhFqQYyWcyJl/+bmNjIzJrRl1uF7EtfGg+P6PNKLveO/XHVa5EmT6VPvwWlm5GX7tvx80bLceaB2zzZ5A==}
+  /@bg-dev/nuxt-directus@2.2.3-beta(@vue/apollo-composable@4.0.0-beta.8):
+    resolution: {integrity: sha512-xPYJ3IDPfjo68drwPJMda8r6mrdCrl6GgVQfo59aqrqulVDsR7SkePEBOYEy+TKsxCuq9MngRUqyKbyezqTWLQ==}
     dependencies:
       '@directus/sdk': 11.0.1
       '@nuxt/kit': 3.6.5
       defu: 6.1.2
       jwt-decode: 3.1.2
-      nuxt-apollo: 0.1.1(@vue/apollo-composable@4.0.0-beta.8)
+      nuxt-apollo: 0.1.2(@vue/apollo-composable@4.0.0-beta.8)
     transitivePeerDependencies:
       - '@vue/apollo-composable'
       - bufferutil
@@ -6213,8 +6213,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /nuxt-apollo@0.1.1(@vue/apollo-composable@4.0.0-beta.8):
-    resolution: {integrity: sha512-fuUFFXGzIVjjvHmWsr4fBqLvB/i86KN0VtpTNLDd3BbdQ0Hay2NsbnrWH2NqXf79bgSA/gZwd+cyq/pVI6YGpA==}
+  /nuxt-apollo@0.1.2(@vue/apollo-composable@4.0.0-beta.8):
+    resolution: {integrity: sha512-N0fcQrVRoSDDjtGIzHWMpdsZltxlZgShP+SSeXLDGwvMHEhRHTBNUwJprRoDD49pEyKDorqx26AhiIzCG6oolw==}
     peerDependencies:
       '@vue/apollo-composable': ^4.0.0-beta.8
     dependencies:
