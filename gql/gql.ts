@@ -16,6 +16,7 @@ const documents = {
     "\n    query GetCounter { counter { value}}\n": types.GetCounterDocument,
     "\n    subscription SubscribeCounter {counter_mutated {data {value}}}\n": types.SubscribeCounterDocument,
     "\n        mutation UpdateCounter($value: Int) {\n          update_counter(data: {value:$value}) {value}\n        }": types.UpdateCounterDocument,
+    "\nquery GetCounter{\n    counter {\n        value\n    }\n}\n": types.GetCounterDocument,
 };
 
 /**
@@ -44,6 +45,10 @@ export function graphql(source: "\n    subscription SubscribeCounter {counter_mu
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function graphql(source: "\n        mutation UpdateCounter($value: Int) {\n          update_counter(data: {value:$value}) {value}\n        }"): (typeof documents)["\n        mutation UpdateCounter($value: Int) {\n          update_counter(data: {value:$value}) {value}\n        }"];
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function graphql(source: "\nquery GetCounter{\n    counter {\n        value\n    }\n}\n"): (typeof documents)["\nquery GetCounter{\n    counter {\n        value\n    }\n}\n"];
 
 export function graphql(source: string) {
   return (documents as any)[source] ?? {};
