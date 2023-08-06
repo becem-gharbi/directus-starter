@@ -1,6 +1,5 @@
 <template>
     <div class="flex flex-col items-center text-center gap-4">
-        {{ initial }}
         <div class="p-4 bg-green-700 rounded shadow">
             <n-text class="text-xl text-white"> {{ counter }}</n-text>
         </div>
@@ -36,5 +35,4 @@ function increment() {
         mutate({ value: counter.value + 1 })
     }
 }
-
 </script>

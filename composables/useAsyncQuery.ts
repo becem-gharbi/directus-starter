@@ -1,10 +1,16 @@
 import type { DocumentParameter } from "@vue/apollo-composable/dist/useQuery";
 import type { ApolloError } from "@apollo/client";
+import type { AsyncDataOptions } from "#app";
+
+interface Error {
+  data: ApolloError;
+}
 
 export default function useAsyncQuery<T>(
-  doc: DocumentParameter<any, undefined>
+  doc: DocumentParameter<any, undefined>,
+  options?: AsyncDataOptions<T>
 ) {
-  return useAsyncData<T, ApolloError>(
+  return useAsyncData<T, Error>(
     () =>
       new Promise<T>((resolve, reject) => {
         const { onResult, onError } = useQuery<T>(doc);
@@ -14,8 +20,9 @@ export default function useAsyncQuery<T>(
           }
         });
         onError((error) => {
-          reject(error);
+          reject({ data: error });
         });
-      })
+      }),
+    options
   );
 }
