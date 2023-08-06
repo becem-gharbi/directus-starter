@@ -14,8 +14,8 @@ devDependencies:
     specifier: 2.2.3-beta
     version: 2.2.3-beta(@vue/apollo-composable@4.0.0-beta.8)
   '@bg-dev/nuxt-naiveui':
-    specifier: 1.2.4
-    version: 1.2.4(vue@3.3.4)
+    specifier: 1.2.5
+    version: 1.2.5(vue@3.3.4)
   '@graphql-codegen/cli':
     specifier: ^5.0.0
     version: 5.0.0(@parcel/watcher@2.2.0)(@types/node@20.4.5)(graphql@16.7.1)
@@ -732,8 +732,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@bg-dev/nuxt-naiveui@1.2.4(vue@3.3.4):
-    resolution: {integrity: sha512-qadwmtvxHbtgl9dafrxGa3ZAfoVFVvLSvVAP+bsvO1KHA2GG7Y/MzhOezooYryB/QAmTaDPQHZWR+nrMhlmnsQ==}
+  /@bg-dev/nuxt-naiveui@1.2.5(vue@3.3.4):
+    resolution: {integrity: sha512-z/rEAQ2ypusJTWq7qMkL6XD5J25wzAEFBxSrx+uJL4pXCVPLnDvg2nKEtRGwze6gMyEJ0n+IgQtSN3lv+09EUA==}
     dependencies:
       '@iconify/vue': 4.1.1(vue@3.3.4)
       '@nuxt/kit': 3.6.5
