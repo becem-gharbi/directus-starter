@@ -1,7 +1,7 @@
 import { naiveui, tailwindcss, directus } from "./config";
 
 export default defineNuxtConfig({
-  ssr: true,
+  ssr: false,
 
   app: {
     head: {
