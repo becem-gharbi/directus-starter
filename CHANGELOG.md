@@ -1,5 +1,28 @@
 # Changelog
 
+## v0.1.5
+
+[compare changes](https://github.com/becem-gharbi/directus-starter/compare/v0.1.4...v0.1.5)
+
+### 💅 Refactors
+
+- Show password on click ([da2235d](https://github.com/becem-gharbi/directus-starter/commit/da2235d))
+
+### 🏡 Chore
+
+- Upgrade dependencies ([2ab0545](https://github.com/becem-gharbi/directus-starter/commit/2ab0545))
+- Upgrade dependencies ([8ae48b7](https://github.com/becem-gharbi/directus-starter/commit/8ae48b7))
+- Upgrade dependencies ([1152bc3](https://github.com/becem-gharbi/directus-starter/commit/1152bc3))
+- Upgrade dependencies ([2278b2d](https://github.com/becem-gharbi/directus-starter/commit/2278b2d))
+- Upgrade dependencies ([abf1400](https://github.com/becem-gharbi/directus-starter/commit/abf1400))
+- Upgrade dependencies ([9d0119d](https://github.com/becem-gharbi/directus-starter/commit/9d0119d))
+- Enable SSR ([336e545](https://github.com/becem-gharbi/directus-starter/commit/336e545))
+- Upgrade dependencies ([ba3f5fc](https://github.com/becem-gharbi/directus-starter/commit/ba3f5fc))
+
+### ❤️  Contributors
+
+- Becem Gharbi <becem.gharbi@live.com>
+
 ## v0.1.4
 
 [compare changes](https://github.com/becem-gharbi/directus-starter/compare/v0.1.3...v0.1.4)
