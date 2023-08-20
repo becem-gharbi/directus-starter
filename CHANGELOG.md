@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.1.6
+
+[compare changes](https://github.com/becem-gharbi/directus-starter/compare/v0.1.5...v0.1.6)
+
+### 🩹 Fixes
+
+- Set colorMode to light on callback page ([854d76e](https://github.com/becem-gharbi/directus-starter/commit/854d76e))
+
+### 📖 Documentation
+
+- Update setup section ([b1b9b30](https://github.com/becem-gharbi/directus-starter/commit/b1b9b30))
+
+### 🏡 Chore
+
+- Upgrade nuxt-directus ([f51fdd0](https://github.com/becem-gharbi/directus-starter/commit/f51fdd0))
+
+### ❤️  Contributors
+
+- Becem Gharbi <becem.gharbi@live.com>
+
 ## v0.1.5
 
 [compare changes](https://github.com/becem-gharbi/directus-starter/compare/v0.1.4...v0.1.5)
