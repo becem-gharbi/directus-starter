@@ -11,8 +11,8 @@ dependencies:
 
 devDependencies:
   '@bg-dev/nuxt-directus':
-    specifier: 2.3.1-beta
-    version: 2.3.1-beta(@vue/apollo-composable@4.0.0-beta.8)
+    specifier: 2.0.1
+    version: 2.0.1(@vue/apollo-composable@4.0.0-beta.8)
   '@bg-dev/nuxt-naiveui':
     specifier: 1.2.6
     version: 1.2.6(vue@3.3.4)
@@ -713,8 +713,8 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@bg-dev/nuxt-directus@2.3.1-beta(@vue/apollo-composable@4.0.0-beta.8):
-    resolution: {integrity: sha512-c3g4xy9zjZYrovLNUdaH6xASdK6pbbKdTKgo2VilPN1Y8wvb1/8r1pm/RQRrGirDJmEeUuVSuMapgQcs+nG8kQ==}
+  /@bg-dev/nuxt-directus@2.0.1(@vue/apollo-composable@4.0.0-beta.8):
+    resolution: {integrity: sha512-TFYHicAiQaZ0HalfLiYT0cSQcl4PSnsjsSW/Le/C8schiB696aKN+1JYNDgrL4nE/TIYTU8Z3A4YgvNdUE6FFw==}
     dependencies:
       '@directus/sdk': 11.0.2
       '@nuxt/kit': 3.6.5
