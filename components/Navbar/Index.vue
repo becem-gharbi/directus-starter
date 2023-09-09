@@ -11,7 +11,7 @@
             <div v-if="!isMobileOrTablet" class="notMobileOrTablet">
                 <LazyNDropdown placement="bottom-start" trigger="click" :options="dropdownOptions"
                     :style="{ padding: '8px', minWidth: '200px' }" @select="handleDropdownSelect">
-                    <img :src="user!.avatar?.toString()" class="w-8 h-8 object-cover rounded-full ring-2 cursor-pointer" />
+                    <AccountAvatar class="cursor-pointer h-8 w-8"></AccountAvatar>
                 </LazyNDropdown>
             </div>
         </template>
