@@ -1,5 +1,5 @@
 <template>
-    <footer :style="{ backgroundColor: naiveTheme.common.bodyColor }" class="text-gray-500">
+    <footer :style="{ backgroundColor: naiveTheme.bodyColor }" class="text-gray-500">
         <nuxt-link :to="repository" target="_blank">
             <span class="flex gap-1 items-start">
                 <naive-icon name="tabler:brand-github" :size="18"></naive-icon>
@@ -11,7 +11,7 @@
 
 <script setup>
 import { version, repository } from "../../package.json"
-const naiveTheme = useNaiveTheme()
+const naiveTheme = useThemeVars()
 </script>
 
 <style scoped>
