@@ -1,5 +1,33 @@
 # Changelog
 
+## v0.1.7
+
+[compare changes](https://github.com/becem-gharbi/directus-starter/compare/v0.1.6...v0.1.7)
+
+### 🔥 Performance
+
+- **default layout:** Lazy load Navbar and Footer ([da58a5c](https://github.com/becem-gharbi/directus-starter/commit/da58a5c))
+- **Navbar:** Lazy load dropdown ([a88eea6](https://github.com/becem-gharbi/directus-starter/commit/a88eea6))
+
+### 💅 Refactors
+
+- **ColorMode selector:** Update to latest nuxt-naiveui changes ([3bacd91](https://github.com/becem-gharbi/directus-starter/commit/3bacd91))
+- Use AccountAvatar on navbar ([939b0d3](https://github.com/becem-gharbi/directus-starter/commit/939b0d3))
+
+### 🌊 Types
+
+- Add schema for useDirectusRest ([23842d9](https://github.com/becem-gharbi/directus-starter/commit/23842d9))
+
+### 🏡 Chore
+
+- Upgrade dependencies ([63bf1f5](https://github.com/becem-gharbi/directus-starter/commit/63bf1f5))
+- Upgrade dependencies ([03e1bef](https://github.com/becem-gharbi/directus-starter/commit/03e1bef))
+- Upgrade dependencies ([5ee88ab](https://github.com/becem-gharbi/directus-starter/commit/5ee88ab))
+
+### ❤️ Contributors
+
+- Becem Gharbi <becem.gharbi@live.com>
+
 ## v0.1.6
 
 [compare changes](https://github.com/becem-gharbi/directus-starter/compare/v0.1.5...v0.1.6)
