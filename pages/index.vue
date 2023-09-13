@@ -3,5 +3,3 @@
         <Graphql></Graphql>
     </div>
 </template>
-
- 
