@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.0.1
+
+[compare changes](https://github.com/becem-gharbi/directus-starter/compare/v0.1.7...v1.0.1)
+
+### 🏡 Chore
+
+- **example.env:** Add NODE_OPTIONS=--dns-result-order=ipv4first ([602b662](https://github.com/becem-gharbi/directus-starter/commit/602b662))
+- **config:** Change 127.0.0.1 to localhost ([5040751](https://github.com/becem-gharbi/directus-starter/commit/5040751))
+- **example.env:** Comment NODE_OPTIONS=--dns-result-order=ipv4first ([7b9b4f5](https://github.com/becem-gharbi/directus-starter/commit/7b9b4f5))
+- **config:** Remove directus options fallbacks ([a733560](https://github.com/becem-gharbi/directus-starter/commit/a733560))
+- Remove nuxt-gtag ([830e809](https://github.com/becem-gharbi/directus-starter/commit/830e809))
+- Remove Bugsnag ([b09fe64](https://github.com/becem-gharbi/directus-starter/commit/b09fe64))
+- Remove /index.d.ts ([f4420a2](https://github.com/becem-gharbi/directus-starter/commit/f4420a2))
+- Bump to stable v1 ([6d711aa](https://github.com/becem-gharbi/directus-starter/commit/6d711aa))
+
+### ❤️ Contributors
+
+- Becem Gharbi <becem.gharbi@live.com>
+
 ## v0.1.7
 
 [compare changes](https://github.com/becem-gharbi/directus-starter/compare/v0.1.6...v0.1.7)
