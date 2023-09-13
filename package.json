@@ -23,9 +23,6 @@
     "nuxt": "^3.7.1",
     "nuxt-security": "^0.14.4"
   },
-  "dependencies": {
-    "@bugsnag/js": "^7.21.0"
-  },
   "overrides": {
     "vue": "3"
   }

@@ -60,10 +60,6 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       defaultRoleId: process.env.DIRECTUS_DEFAULT_ROLE_ID,
-      bugsnag: {
-        enabled: false,
-        apiKey: process.env.BUGSNAG_API_KEY,
-      },
     },
   },
 });
