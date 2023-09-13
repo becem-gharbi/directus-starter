@@ -11,7 +11,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "release": "changelogen --release && git push --follow-tags"
-  },
+   },
   "devDependencies": {
     "@bg-dev/nuxt-directus": "2.0.4",
     "@bg-dev/nuxt-naiveui": "1.4.3",
