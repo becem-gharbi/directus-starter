@@ -2,18 +2,18 @@ import type { ModuleOptions } from "@bg-dev/nuxt-directus";
 
 export const directus: Partial<ModuleOptions> = {
   rest: {
-    baseUrl: process.env.DIRECTUS_REST_BASE_URL || "http://127.0.0.1:8055",
+    baseUrl: process.env.DIRECTUS_REST_BASE_URL || "http://localhost:8055",
     nuxtBaseUrl:
-      process.env.DIRECTUS_REST_NUXT_BASE_URL || "http://127.0.0.1:3000",
+      process.env.DIRECTUS_REST_NUXT_BASE_URL || "http://localhost:3000",
   },
 
   graphql: {
     enabled: true,
     httpEndpoint:
       process.env.DIRECTUS_GRAPHQL_HTTP_ENDPOINT ||
-      "http://127.0.0.1:8055/graphql",
+      "http://localhost:8055/graphql",
     wsEndpoint:
-      process.env.DIRECTUS_GRAPHQL_WS_ENDPOINT || "ws://127.0.0.1:8055/graphql",
+      process.env.DIRECTUS_GRAPHQL_WS_ENDPOINT || "ws://localhost:8055/graphql",
   },
 
   auth: {
