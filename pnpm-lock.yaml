@@ -34,9 +34,6 @@ devDependencies:
   nuxt:
     specifier: ^3.7.1
     version: 3.7.1(@parcel/watcher@2.3.0)
-  nuxt-gtag:
-    specifier: ^1.0.0
-    version: 1.0.0
   nuxt-security:
     specifier: ^0.14.4
     version: 0.14.4
@@ -2303,6 +2300,7 @@ packages:
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.5
+      napi-wasm: 1.1.0
     dev: true
     bundledDependencies:
       - napi-wasm
@@ -6068,6 +6066,10 @@ packages:
     hasBin: true
     dev: true
 
+  /napi-wasm@1.1.0:
+    resolution: {integrity: sha512-lHwIAJbmLSjF9VDRm9GoVOy9AGp3aIvkjv+Kvz9h16QR3uSVYH78PNQUnT2U4X53mhlnV2M7wrhibQ3GHicDmg==}
+    dev: true
+
   /negotiator@0.6.3:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
     engines: {node: '>= 0.6'}
@@ -6320,17 +6322,6 @@ packages:
       '@nuxt/kit': 3.7.2
       defu: 6.1.2
       uncsrf: 1.1.1
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-    dev: true
-
-  /nuxt-gtag@1.0.0:
-    resolution: {integrity: sha512-RlOnaXQ9rfsaR3MOtENXpIl9bziAJ6cS/l1R545Hq2R4Xch4DnvS4Y2FfprmBSJmRqeyd3mkhwiU03NN9XRe+A==}
-    dependencies:
-      '@nuxt/kit': 3.7.2
-      defu: 6.1.2
-      pathe: 1.1.1
     transitivePeerDependencies:
       - rollup
       - supports-color
