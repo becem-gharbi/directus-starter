@@ -1,5 +1,26 @@
 # Changelog
 
+## v1.0.2
+
+[compare changes](https://github.com/becem-gharbi/directus-starter/compare/v1.0.1...v1.0.2)
+
+### 💅 Refactors
+
+- Minor refactoring ([f8ef044](https://github.com/becem-gharbi/directus-starter/commit/f8ef044))
+
+### 🏡 Chore
+
+- Add funding btn ([d45710a](https://github.com/becem-gharbi/directus-starter/commit/d45710a))
+- Upgrade dependencies ([a37007d](https://github.com/becem-gharbi/directus-starter/commit/a37007d))
+- **deps-dev:** Bump @babel/traverse from 7.23.0 to 7.23.2 ([4c35307](https://github.com/becem-gharbi/directus-starter/commit/4c35307))
+- **deps-dev:** Bump undici from 5.25.2 to 5.27.0 ([4295573](https://github.com/becem-gharbi/directus-starter/commit/4295573))
+- No significant change ([b08c5b8](https://github.com/becem-gharbi/directus-starter/commit/b08c5b8))
+
+### ❤️ Contributors
+
+- Becem-gharbi ([@becem-gharbi](http://github.com/becem-gharbi))
+- Becem Gharbi ([@becem-gharbi](http://github.com/becem-gharbi))
+
 ## v1.0.1
 
 [compare changes](https://github.com/becem-gharbi/directus-starter/compare/v0.1.7...v1.0.1)
