@@ -1,13 +1,13 @@
 <template>
     <div v-if="src">
-        <img :src="src" class="shadow object-contain rounded-full ring-1">
+        <img :src="src" class="shadow object-contain rounded-full ring-1" alt="avatar">
     </div>
 </template>
 
 <script setup lang="ts">
 const { user } = useDirectusAuth()
-const { directus } = useRuntimeConfig().public;
-const baseUrl = directus.rest.baseUrl;
+const config = useRuntimeConfig();
+const baseUrl = config.public.rest.baseUrl;
 
 const src = computed(() => {
     if (user.value) {

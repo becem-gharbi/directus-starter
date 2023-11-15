@@ -1,25 +1,25 @@
 <template>
-  <NaiveConfig :theme-config="themeConfig">
+  <naive-config :theme-config="themeConfig">
 
-    <ClientOnly>
+    <client-only>
       <n-notification-provider placement="bottom-right">
         <NotificationNetwork />
       </n-notification-provider>
-    </ClientOnly>
+    </client-only>
 
-    <NuxtLoadingIndicator :color="themeConfig.light?.common?.primaryColor" />
+    <nuxt-loading-indicator :color="themeConfig.light?.common?.primaryColor" />
 
     <n-message-provider>
-      <NuxtLayout>
+      <nuxt-layout>
         <NuxtPage />
-      </NuxtLayout>
+      </nuxt-layout>
     </n-message-provider>
 
-  </NaiveConfig>
+  </naive-config>
 </template>
 
 <script setup lang="ts">
-import { ThemeConfig } from "@bg-dev/nuxt-naiveui"
+import type { ThemeConfig } from "@bg-dev/nuxt-naiveui"
 import { theme } from "#tailwind-config";
 
 const themeConfig = ref<ThemeConfig>({

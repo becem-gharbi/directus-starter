@@ -2,10 +2,10 @@
     <div>
         <n-upload class="overflow-hidden w-min mx-auto my-4" list-type="image-card" :max="1" accept="image/*"
             :custom-request="(e) => file = e.file.file">
-            <AccountAvatar></AccountAvatar>
+            <AccountAvatar/>
         </n-upload>
 
-        <n-form ref="formRef" :model="model" :rules="rules" @submit.prevent="() => onSubmit(handleSubmit)" class="flex-1">
+        <n-form ref="formRef" :model="model" :rules="rules" @submit.prevent="onSubmit(handleSubmit)" class="flex-1">
             <n-form-item label="First name" path="firstName">
                 <n-input v-model:value="model.firstName"></n-input>
             </n-form-item>
