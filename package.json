@@ -13,15 +13,15 @@
     "release": "changelogen --release && git push --follow-tags"
   },
   "devDependencies": {
-    "@bg-dev/nuxt-directus": "2.0.5",
-    "@bg-dev/nuxt-naiveui": "1.4.7",
+    "@bg-dev/nuxt-directus": "2.1.1",
+    "@bg-dev/nuxt-naiveui": "1.5.5",
     "@graphql-codegen/cli": "^5.0.0",
     "@graphql-codegen/client-preset": "^4.1.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@parcel/watcher": "^2.3.0",
     "changelogen": "^0.5.5",
     "nuxt": "^3.7.4",
-    "nuxt-security": "^0.14.4"
+    "nuxt-security": "1.0.0-rc.4"
   },
   "overrides": {
     "vue": "3"
