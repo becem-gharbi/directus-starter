@@ -7,7 +7,7 @@
 <script setup lang="ts">
 const { user } = useDirectusAuth()
 const config = useRuntimeConfig();
-const baseUrl = config.public.rest.baseUrl;
+const baseUrl = config.public.directus.rest.baseUrl;
 
 const src = computed(() => {
     if (user.value) {
