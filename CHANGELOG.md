@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.0.3
+
+[compare changes](https://github.com/becem-gharbi/directus-starter/compare/v1.0.2...v1.0.3)
+
+### 💅 Refactors
+
+- Minor refactoring ([bd13cb1](https://github.com/becem-gharbi/directus-starter/commit/bd13cb1))
+
+### 🏡 Chore
+
+- Format with nuxt eslint config ([2516677](https://github.com/becem-gharbi/directus-starter/commit/2516677))
+
+### ❤️ Contributors
+
+- Becem-gharbi <becem.gharbi@live.com>
+
 ## v1.0.2
 
 [compare changes](https://github.com/becem-gharbi/directus-starter/compare/v1.0.1...v1.0.2)
