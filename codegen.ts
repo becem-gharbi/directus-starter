@@ -5,25 +5,25 @@
 -- Make sure to add this file to .gitignore
  */
 
-const staticToken = "OySMUHR0yf0g9jz_lIz-UXuEAA1f_J_N";
+const staticToken = 'OySMUHR0yf0g9jz_lIz-UXuEAA1f_J_N'
 
 const config = {
   schema: `http://127.0.0.1:8055/graphql?access_token=${staticToken}`,
   documents: [
-    "./pages/**/*.vue",
-    "./components/**/*.vue",
-    "./composables/**/*.ts",
-    "./app.vue",
+    './pages/**/*.vue',
+    './components/**/*.vue',
+    './composables/**/*.ts',
+    './app.vue'
   ],
   ignoreNoDocuments: true,
   generates: {
-    "./gql/": {
-      preset: "client",
+    './gql/': {
+      preset: 'client',
       config: {
-        useTypeImports: true,
-      },
-    },
-  },
-};
+        useTypeImports: true
+      }
+    }
+  }
+}
 
-export default config;
+export default config

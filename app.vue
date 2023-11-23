@@ -1,6 +1,5 @@
 <template>
   <naive-config :theme-config="themeConfig">
-
     <client-only>
       <n-notification-provider placement="bottom-right">
         <NotificationNetwork />
@@ -14,24 +13,23 @@
         <NuxtPage />
       </nuxt-layout>
     </n-message-provider>
-
   </naive-config>
 </template>
 
 <script setup lang="ts">
-import type { ThemeConfig } from "@bg-dev/nuxt-naiveui"
-import { theme } from "#tailwind-config";
+import type { ThemeConfig } from '@bg-dev/nuxt-naiveui'
+import { theme } from '#tailwind-config'
 
 const themeConfig = ref<ThemeConfig>({
   shared: {
     common: {
-      fontFamily: theme.fontFamily.sans.join(","),
+      fontFamily: theme.fontFamily.sans.join(','),
       lineHeight: theme.lineHeight.normal,
-      borderRadius: "6px"
+      borderRadius: '6px'
     },
     Form: {
-      feedbackPadding: theme.padding[2],
-    },
+      feedbackPadding: theme.padding[2]
+    }
   },
 
   light: {
@@ -39,7 +37,7 @@ const themeConfig = ref<ThemeConfig>({
       primaryColor: theme.colors.violet[600],
       primaryColorHover: theme.colors.violet[500],
       primaryColorPressed: theme.colors.violet[700],
-      borderColor: theme.colors.gray[300],
+      borderColor: theme.colors.gray[300]
     },
     Card: {
       borderColor: theme.colors.gray[300]
@@ -51,11 +49,11 @@ const themeConfig = ref<ThemeConfig>({
       primaryColor: theme.colors.violet[500],
       primaryColorHover: theme.colors.violet[400],
       primaryColorPressed: theme.colors.violet[600],
-      borderColor: theme.colors.gray[800],
+      borderColor: theme.colors.gray[800]
     },
     Card: {
       borderColor: theme.colors.gray[800]
     }
-  },
+  }
 })
 </script>

@@ -1,5 +1,5 @@
 <template>
-    <div class="m-5">
-        <Graphql></Graphql>
-    </div>
+  <div class="m-5">
+    <Graphql />
+  </div>
 </template>
