@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@bg-dev/nuxt-directus": "^2.1.6",
-    "@bg-dev/nuxt-naiveui": "^1.6.1",
+    "@bg-dev/nuxt-naiveui": "^1.6.2",
     "@graphql-codegen/cli": "^5.0.0",
     "@graphql-codegen/client-preset": "^4.1.0",
     "@nuxtjs/eslint-config": "^12.0.0",
