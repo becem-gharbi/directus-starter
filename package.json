@@ -25,6 +25,6 @@
     "changelogen": "^0.5.5",
     "eslint": "^8.55.0",
     "nuxt": "^3.8.2",
-    "nuxt-security": "1.0.0-rc.5"
+    "nuxt-security": "^1.0.0"
   }
 }
