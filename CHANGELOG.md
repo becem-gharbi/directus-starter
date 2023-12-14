@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.0.4
+
+[compare changes](https://github.com/becem-gharbi/directus-starter/compare/v1.0.3...v1.0.4)
+
+### 💅 Refactors
+
+- **auth layout:** Change styles ([ce1daaf](https://github.com/becem-gharbi/directus-starter/commit/ce1daaf))
+
+### 🏡 Chore
+
+- Formatting ([82ea21d](https://github.com/becem-gharbi/directus-starter/commit/82ea21d))
+
+### ❤️ Contributors
+
+- Becem-gharbi <becem.gharbi@live.com>
+
 ## v1.0.3
 
 [compare changes](https://github.com/becem-gharbi/directus-starter/compare/v1.0.2...v1.0.3)
