@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.0.5
+
+[compare changes](https://github.com/becem-gharbi/directus-starter/compare/v1.0.4...v1.0.5)
+
+### 🏡 Chore
+
+- Remove extra google fonts weight ([c7884cf](https://github.com/becem-gharbi/directus-starter/commit/c7884cf))
+
+### ❤️ Contributors
+
+- Becem-gharbi <becem.gharbi@live.com>
+
 ## v1.0.4
 
 [compare changes](https://github.com/becem-gharbi/directus-starter/compare/v1.0.3...v1.0.4)
