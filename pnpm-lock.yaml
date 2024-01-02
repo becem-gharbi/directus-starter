@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@bg-dev/nuxt-directus':
-    specifier: ^2.1.8
-    version: 2.1.8(@vue/apollo-composable@4.0.0-beta.12)
+    specifier: ^2.1.9
+    version: 2.1.9(@vue/apollo-composable@4.0.0-beta.12)
   '@bg-dev/nuxt-naiveui':
     specifier: ^1.8.0
     version: 1.8.0(vue@3.4.3)
@@ -764,8 +764,8 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@bg-dev/nuxt-directus@2.1.8(@vue/apollo-composable@4.0.0-beta.12):
-    resolution: {integrity: sha512-kVMWoHaMkTQG/FANCkQ1unHIhRd8tZckiA47S8ZF1CJOLok04h21D0LoY5W1oeTvCafQgygsRHio7bCYi+pzSw==}
+  /@bg-dev/nuxt-directus@2.1.9(@vue/apollo-composable@4.0.0-beta.12):
+    resolution: {integrity: sha512-nmsX4pqdSJeUbGVHkGLrbAbuO8NlMawdnNTKXXuE4Tn8aWzS7EwCuHW9hs+T2ZWtv48ZALqd5RJ4veY/NvFFyw==}
     dependencies:
       '@directus/sdk': 14.0.0
       '@nuxt/kit': 3.9.0
@@ -1585,7 +1585,7 @@ packages:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
     dependencies:
       graphql: 16.8.1
-      tslib: 2.5.3
+      tslib: 2.6.2
     dev: true
 
   /@graphql-tools/prisma-loader@8.0.2(graphql@16.8.1):
@@ -1630,7 +1630,7 @@ packages:
       '@ardatan/relay-compiler': 12.0.0(graphql@16.8.1)
       '@graphql-tools/utils': 10.0.12(graphql@16.8.1)
       graphql: 16.8.1
-      tslib: 2.5.3
+      tslib: 2.6.2
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -2353,6 +2353,7 @@ packages:
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.5
+      napi-wasm: 1.1.0
     dev: true
     bundledDependencies:
       - napi-wasm
@@ -7219,6 +7220,10 @@ packages:
     resolution: {integrity: sha512-7ZtY5KTCNheRGfEFxnedV5zFiORN1+Y1N6zvPTnHQd8ENUvfaDBeuJDZb2bN/oXwXxu3qkTXDzy57W5vAmDTBw==}
     engines: {node: ^14 || ^16 || >=18}
     hasBin: true
+    dev: true
+
+  /napi-wasm@1.1.0:
+    resolution: {integrity: sha512-lHwIAJbmLSjF9VDRm9GoVOy9AGp3aIvkjv+Kvz9h16QR3uSVYH78PNQUnT2U4X53mhlnV2M7wrhibQ3GHicDmg==}
     dev: true
 
   /natural-compare@1.4.0:
