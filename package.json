@@ -14,7 +14,7 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@bg-dev/nuxt-directus": "^2.1.9",
+    "@bg-dev/nuxt-directus": "^2.1.10",
     "@bg-dev/nuxt-naiveui": "^1.8.0",
     "@graphql-codegen/cli": "^5.0.0",
     "@graphql-codegen/client-preset": "^4.1.0",
