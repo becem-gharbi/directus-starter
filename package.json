@@ -26,5 +26,11 @@
     "eslint": "^8.55.0",
     "nuxt": "^3.9.0",
     "nuxt-security": "^1.0.0"
+  },
+  "overrides": {
+    "vue": "3.4.8"
+  },
+  "resolutions": {
+    "vue": "3.4.8"
   }
 }
