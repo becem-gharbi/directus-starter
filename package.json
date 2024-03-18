@@ -14,23 +14,17 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@bg-dev/nuxt-directus": "^2.1.11",
-    "@bg-dev/nuxt-naiveui": "^1.10.1",
-    "@graphql-codegen/cli": "^5.0.0",
-    "@graphql-codegen/client-preset": "^4.1.0",
+    "@bg-dev/nuxt-directus": "^2.3.1",
+    "@bg-dev/nuxt-naiveui": "^1.10.4",
+    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/client-preset": "^4.2.4",
     "@nuxtjs/eslint-config": "^12.0.0",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
-    "@nuxtjs/tailwindcss": "^6.11.3",
-    "@parcel/watcher": "^2.4.0",
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "@parcel/watcher": "^2.4.1",
     "changelogen": "^0.5.5",
-    "eslint": "^8.56.0",
-    "nuxt": "^3.10.0",
-    "nuxt-security": "^1.1.0"
-  },
-  "overrides": {
-    "vue": "3.4.8"
-  },
-  "resolutions": {
-    "vue": "3.4.8"
+    "eslint": "^8.57.0",
+    "nuxt": "^3.11.0",
+    "nuxt-security": "^1.2.2"
   }
 }

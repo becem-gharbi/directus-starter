@@ -14,6 +14,7 @@ export const directus: Partial<ModuleOptions> = {
 
   auth: {
     enabled: true,
+    mode: 'cookie',
     enableGlobalAuthMiddleware: true,
     redirect: {
       callback: '/auth/callback',
